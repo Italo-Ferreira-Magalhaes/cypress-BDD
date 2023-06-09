@@ -5,7 +5,7 @@ export default {
         cy.visit('/')
             .get('#top_header')
 
-        cy.get('fa-user')
+        cy.get('.fa-user')
             .click()
             .get('.account_form')
             .should('be.visible')

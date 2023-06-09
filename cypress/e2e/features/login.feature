@@ -9,12 +9,12 @@ Feature: Login
 
     Scenario: Login com campo e-mail vazio
         When clico em Login
-        Then recebo a mensagem "E-mail inválido"
+        Then recebo a mensagem "E-mail inválido."
 
     Scenario: Login com campo senha vazio
         And preencho e-mail
         When clico em Login
-        Then recebo a mensagem "Senha inválido"
+        Then recebo a mensagem "Senha inválida."
 
     Scenario: Login com sucesso
         And preencho meus dados de acesso

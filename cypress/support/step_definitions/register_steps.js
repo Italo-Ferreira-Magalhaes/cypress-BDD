@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
-import { Given, When, Then } from "@bahmutov/cypress-esbuild-preprocessor"
+//import { Given, When, Then } from "@bahmutov/cypress-esbuild-preprocessor"
+import { Given, When, Then, } from "@badeball/cypress-cucumber-preprocessor";
 import home_page from "../pages/home_page"
 import register_page from "../pages/register_page"
 
@@ -47,5 +48,5 @@ Then ("recebo a mensagem {string} no cadastro", (message) => {
 
 Then ("cadastro realizado com sucesso", () => {
     register_page.sucessRegisterMessage('Cadastro realizado!')
-    register_page.wellcomeMessage({name})
+    register_page.wellcomeMessage(name)
 })

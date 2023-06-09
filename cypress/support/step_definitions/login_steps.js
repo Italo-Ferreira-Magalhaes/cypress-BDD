@@ -1,7 +1,8 @@
 /// 2 - Transformar o ghrkin em método 
 /// <reference types="cypress" />
 
-import { Given, When, Then } from "@bahmutov/cypress-esbuild-preprocessor"
+//import { Given, When, Then } from "@bahmutov/cypress-esbuild-preprocessor"
+import { Given, When, Then, } from "@badeball/cypress-cucumber-preprocessor";
 import home_page from "../pages/home_page"
 import login_page from "../pages/login_page"
 
@@ -29,7 +30,7 @@ Then ("recebo a mensagem {string}", (message) => {
     login_page.checkMessageError(message)
 })
 
-Then ("login realizado com sucesso", async () => {
-    await login_page.loginSucessMessage('Login realizado')
-    await login_page.wellcomeMessage(email)
+Then ("login realizado com sucesso", () => {
+    login_page.loginSucessMessage('Login realizado')
+    login_page.wellcomeMessage(email)
 })
